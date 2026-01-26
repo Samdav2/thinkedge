@@ -46,12 +46,33 @@ export default function Footer() {
                         </ul>
                     </div>
 
+                    {/* Legals */}
+                    <div>
+                        <h3 className="text-lg font-bold uppercase mb-6 border-b border-white/20 pb-2 inline-block">
+                            Legals
+                        </h3>
+                        <ul className="space-y-3">
+                            <li>
+                                <Link href="/privacy-policy" className="text-blue-100 hover:text-white transition-colors text-sm">Privacy Policy</Link>
+                            </li>
+                            <li>
+                                <Link href="/cookie-policy" className="text-blue-100 hover:text-white transition-colors text-sm">Cookie Policy</Link>
+                            </li>
+                            <li>
+                                <Link href="/terms-of-service" className="text-blue-100 hover:text-white transition-colors text-sm">Terms of Service</Link>
+                            </li>
+                            <li>
+                                <Link href="/disclaimer" className="text-blue-100 hover:text-white transition-colors text-sm">Disclaimer</Link>
+                            </li>
+                        </ul>
+                    </div>
+
                     {/* Contact Us */}
-                    <div className="lg:col-span-2">
+                    <div>
                         <h3 className="text-lg font-bold uppercase mb-6 border-b border-white/20 pb-2 inline-block">
                             Contact Us
                         </h3>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div className="space-y-8">
                             <div className="space-y-4">
                                 <div className="flex items-center">
                                     <Phone className="h-5 w-5 mr-3 text-blue-200" />
@@ -68,7 +89,7 @@ export default function Footer() {
                                 </div>
                             </div>
 
-                            <div className="flex items-center justify-center md:justify-end">
+                            <div className="flex items-center justify-start">
                                 {/* Logo Placeholder */}
                                 <div className="flex items-center gap-2">
                                     <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center rounded-sm">
