@@ -53,7 +53,7 @@ export default function Hero() {
                             Think Edge Consultancy is a UK-based business consultancy helping individuals and organisations turn ideas into clear plans, make informed decisions through research, and deliver results through professional service execution.
                         </p>
 
-                        <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
                             We consult first — we listen, analyse, and recommend the right approach — then we deliver through our specialist service divisions.
                         </p>
 
