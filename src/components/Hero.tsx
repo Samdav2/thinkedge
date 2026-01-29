@@ -2,70 +2,69 @@ import Image from "next/image";
 import Link from "next/link";
 import { Package, ClipboardCheck, Headphones, ArrowRight } from "lucide-react";
 
-export default function Hero() {
-    // Reusable Image Component to ensure consistency between Mobile and Desktop views
-    const HeroImage = ({ className = "" }: { className?: string }) => (
-        <div className={`relative flex justify-center items-center ${className}`}>
-            {/* Background Shape behind image */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[110%] bg-gradient-to-tr from-white/5 to-white/0 rounded-[3rem] -rotate-6 z-0 border border-white/5"></div>
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[100%] bg-[#0F172A] rounded-[2.5rem] rotate-0 z-0"></div>
+const HeroImage = ({ className = "" }: { className?: string }) => (
+    <div className={`relative flex justify-center items-center ${className}`}>
+        {/* Background Shape behind image */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[110%] bg-gradient-to-tr from-white/5 to-white/0 rounded-[3rem] -rotate-6 z-0 border border-white/5"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[100%] bg-[#0F172A] rounded-[2.5rem] rotate-0 z-0"></div>
 
-            {/* Main Image Container */}
-            <div className="relative z-10 w-full max-w-[280px] sm:max-w-md lg:max-w-lg aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl shadow-brand-primary/20">
-                <Image
-                    src="/images/hero-team.jpg"
-                    alt="Think Edge Consultancy Team"
-                    fill
-                    className="object-cover"
-                    priority
-                    quality={100}
-                />
+        {/* Main Image Container */}
+        <div className="relative z-10 w-full max-w-[280px] sm:max-w-md lg:max-w-lg aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-white/10 shadow-2xl shadow-brand-primary/20">
+            <Image
+                src="/images/hero-team.jpg"
+                alt="Think Edge Consultancy Team"
+                fill
+                className="object-cover"
+                priority
+                quality={100}
+            />
 
-                {/* Overlay Gradient on Image */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent opacity-60"></div>
+            {/* Overlay Gradient on Image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent opacity-60"></div>
+        </div>
+
+        {/* Floating Badges */}
+
+        {/* Badge 1: Professional Delivery */}
+        <div className="absolute top-[10%] right-[-10px] sm:right-[-20px] lg:right-[-40px] bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl flex items-center gap-3 sm:gap-4 shadow-xl z-20 animate-float">
+            <div className="bg-brand-primary p-1.5 sm:p-2 rounded-lg text-white">
+                <Package size={16} className="sm:w-5 sm:h-5" />
             </div>
-
-            {/* Floating Badges */}
-
-            {/* Badge 1: Professional Delivery */}
-            <div className="absolute top-[10%] right-[-10px] sm:right-[-20px] lg:right-[-40px] bg-white/10 backdrop-blur-md border border-white/20 p-3 sm:p-4 rounded-2xl flex items-center gap-3 sm:gap-4 shadow-xl z-20 animate-float">
-                <div className="bg-brand-primary p-1.5 sm:p-2 rounded-lg text-white">
-                    <Package size={16} className="sm:w-5 sm:h-5" />
-                </div>
-                <div>
-                    <p className="text-white font-bold text-xs sm:text-sm">Professional</p>
-                    <p className="text-gray-400 text-[10px] sm:text-xs">Delivery</p>
-                </div>
-            </div>
-
-            {/* Badge 2: Reviews */}
-            <div className="absolute bottom-[15%] right-[-10px] sm:right-[-20px] lg:right-[-30px] bg-white/10 backdrop-blur-md border border-white/20 p-2 sm:p-3 rounded-2xl flex items-center gap-2 sm:gap-3 shadow-xl z-20 animate-float-delayed">
-                <div className="flex -space-x-2">
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-400 border-2 border-[#0F172A]"></div>
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-300 border-2 border-[#0F172A]"></div>
-                    <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-brand-primary border-2 border-[#0F172A] flex items-center justify-center text-[8px] sm:text-[10px] text-white font-bold">+5</div>
-                </div>
-                <div>
-                    <div className="flex text-yellow-400 text-[10px] sm:text-xs">
-                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    </div>
-                    <p className="text-gray-300 text-[10px] sm:text-xs font-medium">Trusted by many</p>
-                </div>
-            </div>
-
-            {/* Badge 3: Clear Result (Bottom Left) */}
-            <div className="absolute bottom-[5%] left-[-10px] sm:left-[20px] lg:left-[-20px] bg-[#1E293B] border border-white/10 p-3 sm:p-4 rounded-2xl flex flex-col gap-1 sm:gap-2 shadow-xl z-20 max-w-[140px] sm:max-w-[160px]">
-                <div className="bg-brand-accent/20 w-fit p-1.5 sm:p-2 rounded-lg text-brand-accent">
-                    <ClipboardCheck size={16} className="sm:w-5 sm:h-5" />
-                </div>
-                <div>
-                    <p className="text-white font-bold text-xs sm:text-sm">Clear Result</p>
-                    <p className="text-gray-400 text-[10px] sm:text-xs leading-tight">We ensure your ideas turn into reality.</p>
-                </div>
+            <div>
+                <p className="text-white font-bold text-xs sm:text-sm">Professional</p>
+                <p className="text-gray-400 text-[10px] sm:text-xs">Delivery</p>
             </div>
         </div>
-    );
 
+        {/* Badge 2: Reviews */}
+        <div className="absolute bottom-[15%] right-[-10px] sm:right-[-20px] lg:right-[-30px] bg-white/10 backdrop-blur-md border border-white/20 p-2 sm:p-3 rounded-2xl flex items-center gap-2 sm:gap-3 shadow-xl z-20 animate-float-delayed">
+            <div className="flex -space-x-2">
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-400 border-2 border-[#0F172A]"></div>
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-gray-300 border-2 border-[#0F172A]"></div>
+                <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full bg-brand-primary border-2 border-[#0F172A] flex items-center justify-center text-[8px] sm:text-[10px] text-white font-bold">+5</div>
+            </div>
+            <div>
+                <div className="flex text-yellow-400 text-[10px] sm:text-xs">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <p className="text-gray-300 text-[10px] sm:text-xs font-medium">Trusted by many</p>
+            </div>
+        </div>
+
+        {/* Badge 3: Clear Result (Bottom Left) */}
+        <div className="absolute bottom-[5%] left-[-10px] sm:left-[20px] lg:left-[-20px] bg-[#1E293B] border border-white/10 p-3 sm:p-4 rounded-2xl flex flex-col gap-1 sm:gap-2 shadow-xl z-20 max-w-[140px] sm:max-w-[160px]">
+            <div className="bg-brand-accent/20 w-fit p-1.5 sm:p-2 rounded-lg text-brand-accent">
+                <ClipboardCheck size={16} className="sm:w-5 sm:h-5" />
+            </div>
+            <div>
+                <p className="text-white font-bold text-xs sm:text-sm">Clear Result</p>
+                <p className="text-gray-400 text-[10px] sm:text-xs leading-tight">We ensure your ideas turn into reality.</p>
+            </div>
+        </div>
+    </div>
+);
+
+export default function Hero() {
     return (
         <section className="relative w-full min-h-[100dvh] bg-[#0F172A] overflow-hidden flex flex-col lg:flex-row items-center justify-center pt-24 pb-12 lg:py-0">
             {/* Background Gradients/Blobs */}
@@ -160,8 +159,8 @@ export default function Hero() {
                     </div>
 
                     {/* Right Column: Image & Shapes (Desktop Only) */}
-                    <div className="hidden lg:flex justify-end items-center h-full">
-                        <HeroImage />
+                    <div className="hidden lg:flex justify-end items-center h-full w-full">
+                        <HeroImage className="w-full" />
                     </div>
                 </div>
             </div>
