@@ -27,11 +27,11 @@ export default function Navbar({ isTransparent = false }: NavbarProps) {
                     </div>
 
                     <div className="hidden md:flex items-center space-x-8">
-                        <Link href="/" className={`${isTransparent ? "text-[#0F2E44] hover:text-white/80" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Home</Link>
-                        <Link href="#services" className={`${isTransparent ? "text-[#0F2E44] hover:text-white/80" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Services</Link>
-                        <Link href="/about" className={`${isTransparent ? "text-[#0F2E44] hover:text-white/80" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>About</Link>
-                        <Link href="#pricing" className={`${isTransparent ? "text-[#0F2E44] hover:text-white/80" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Pricing</Link>
-                        <Link href="#contact" className={`${isTransparent ? "text-[#0F2E44] hover:text-white/80" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Contact</Link>
+                        <Link href="/" className={`${isTransparent ? "text-white hover:text-brand-primary" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Home</Link>
+                        <Link href="#services" className={`${isTransparent ? "text-white hover:text-brand-primary" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Services</Link>
+                        <Link href="/about" className={`${isTransparent ? "text-white hover:text-brand-primary" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>About</Link>
+                        <Link href="#pricing" className={`${isTransparent ? "text-white hover:text-brand-primary" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Pricing</Link>
+                        <Link href="#contact" className={`${isTransparent ? "text-white hover:text-brand-primary" : "text-white hover:text-brand-primary"} font-bold transition-colors`}>Contact</Link>
                     </div>
 
                     <div className="hidden md:flex items-center">
@@ -43,7 +43,7 @@ export default function Navbar({ isTransparent = false }: NavbarProps) {
                     <div className="flex items-center md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className={`${isTransparent ? "text-[#0F2E44] hover:text-white/80" : "text-white hover:text-brand-primary"} focus:outline-none`}
+                            className={`${isTransparent ? "text-white hover:text-brand-primary" : "text-white hover:text-brand-primary"} focus:outline-none`}
                         >
                             {isOpen ? <X size={28} /> : <Menu size={28} />}
                         </button>
