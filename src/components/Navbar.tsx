@@ -5,12 +5,15 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
+import { useQuoteModal } from "@/context/QuoteModalContext";
+
 interface NavbarProps {
     isTransparent?: boolean;
 }
 
 export default function Navbar({ isTransparent = false }: NavbarProps) {
     const [isOpen, setIsOpen] = useState(false);
+    const { openQuoteModal } = useQuoteModal();
 
     return (
         <nav className={`${isTransparent ? "absolute w-full bg-transparent z-50" : "bg-brand-dark sticky top-0 z-50 shadow-sm"}`}>
@@ -35,9 +38,12 @@ export default function Navbar({ isTransparent = false }: NavbarProps) {
                     </div>
 
                     <div className="hidden md:flex items-center">
-                        <Link href="#contact" className="bg-brand-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-semibold transition-colors uppercase text-sm tracking-wider">
+                        <button
+                            onClick={() => openQuoteModal()}
+                            className="bg-brand-primary hover:bg-blue-700 text-white px-6 py-2.5 rounded-sm font-semibold transition-colors uppercase text-sm tracking-wider cursor-pointer"
+                        >
                             Request a Quote
-                        </Link>
+                        </button>
                     </div>
 
                     <div className="flex items-center md:hidden">
@@ -61,9 +67,15 @@ export default function Navbar({ isTransparent = false }: NavbarProps) {
                         <Link href="#pricing" className="block px-3 py-2 text-base font-medium text-white hover:text-brand-primary hover:bg-white/5 rounded-md">Pricing</Link>
                         <Link href="#contact" className="block px-3 py-2 text-base font-medium text-white hover:text-brand-primary hover:bg-white/5 rounded-md">Contact</Link>
                         <div className="mt-4">
-                            <Link href="#contact" className="block w-full text-center bg-brand-primary text-white px-4 py-3 rounded-sm font-semibold uppercase">
+                            <button
+                                onClick={() => {
+                                    setIsOpen(false);
+                                    openQuoteModal();
+                                }}
+                                className="block w-full text-center bg-brand-primary hover:bg-blue-700 text-white px-4 py-3 rounded-sm font-semibold uppercase cursor-pointer"
+                            >
                                 Request a Quote
-                            </Link>
+                            </button>
                         </div>
                     </div>
                 </div>

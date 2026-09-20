@@ -1,8 +1,12 @@
+"use client";
+
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useQuoteModal } from "@/context/QuoteModalContext";
 
 export default function Services() {
+    const { openQuoteModal } = useQuoteModal();
     const whatWeDoList = [
         "Business idea research and evaluation",
         "Market and competitor research",
@@ -125,9 +129,12 @@ export default function Services() {
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                                    <Link href="#contact" className="flex-1 text-center bg-brand-primary text-white py-3 rounded-sm font-medium hover:bg-blue-700 transition-colors text-sm uppercase">
+                                    <button
+                                        onClick={() => openQuoteModal("EdgeBrand")}
+                                        className="flex-1 text-center bg-brand-primary text-white py-3 rounded-sm font-medium hover:bg-blue-700 transition-colors text-sm uppercase cursor-pointer"
+                                    >
                                         Request EdgeBrand Quote
-                                    </Link>
+                                    </button>
                                     <Link href="https://wa.me/447448549211" className="flex-1 text-center border border-brand-primary text-brand-primary py-3 rounded-sm font-medium hover:bg-blue-50 transition-colors text-sm uppercase">
                                         Chat on WhatsApp
                                     </Link>
@@ -174,10 +181,13 @@ export default function Services() {
                                 </div>
 
                                 <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                                    <Link href="#contact" className="flex-1 text-center bg-brand-primary text-white py-3 rounded-sm font-medium hover:bg-blue-700 transition-colors text-sm uppercase">
+                                    <button
+                                        onClick={() => openQuoteModal("EdgeCover")}
+                                        className="flex-1 text-center bg-brand-primary text-white py-3 rounded-sm font-medium hover:bg-blue-700 transition-colors text-sm uppercase cursor-pointer"
+                                    >
                                         Request EdgeCover Quote
-                                    </Link>
-                                    <Link href="#whatsapp" className="flex-1 text-center border border-brand-primary text-brand-primary py-3 rounded-sm font-medium hover:bg-blue-50 transition-colors text-sm uppercase">
+                                    </button>
+                                    <Link href="https://wa.me/447448549211" className="flex-1 text-center border border-brand-primary text-brand-primary py-3 rounded-sm font-medium hover:bg-blue-50 transition-colors text-sm uppercase">
                                         Chat on WhatsApp
                                     </Link>
                                 </div>
