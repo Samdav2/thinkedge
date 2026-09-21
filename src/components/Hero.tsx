@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Package, ClipboardCheck, Headphones, ArrowRight } from "lucide-react";
+import { useQuoteModal } from "@/context/QuoteModalContext";
 
 const HeroImage = ({ className = "" }: { className?: string }) => (
     <div className={`relative flex justify-center items-center ${className}`}>
@@ -65,6 +68,7 @@ const HeroImage = ({ className = "" }: { className?: string }) => (
 );
 
 export default function Hero() {
+    const { openQuoteModal } = useQuoteModal();
     return (
         <section className="relative w-full min-h-[100dvh] bg-[#0F172A] overflow-hidden flex flex-col lg:flex-row items-center justify-center pt-24 pb-12 lg:py-0">
             {/* Background Gradients/Blobs */}
@@ -127,15 +131,16 @@ export default function Hero() {
 
                         {/* Buttons */}
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto pt-4">
-                            <Link
-                                href="#contact"
-                                className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-brand-primary rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 shadow-lg shadow-blue-500/30 overflow-hidden"
+                            <button
+                                type="button"
+                                onClick={() => openQuoteModal()}
+                                className="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white transition-all duration-200 bg-brand-primary rounded-full hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-600 shadow-lg shadow-blue-500/30 overflow-hidden cursor-pointer"
                             >
                                 <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-black"></span>
                                 <span className="relative flex items-center gap-2">
                                     Request Consultation
                                 </span>
-                            </Link>
+                            </button>
 
                             <Link
                                 href="https://wa.me/447448549211"
