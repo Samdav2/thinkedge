@@ -30,10 +30,11 @@ export default function PrivacyPolicy() {
                         <h3 className="text-xl font-bold text-brand-dark mb-3">1. Who We Are</h3>
                         <ul className="list-none space-y-2">
                             <li><span className="font-semibold">Company name:</span> Think Edge Consultancy Ltd</li>
+                            <li><span className="font-semibold">Registered address:</span> 82A James Carter Road, Mildenhall, Suffolk, IP28 7DE, United Kingdom</li>
                             <li><span className="font-semibold">Business type:</span> UK business consultancy</li>
-                            <li><span className="font-semibold">Services:</span> Website & graphic design, consultancy-led services, and non-regulated staffing and operational support</li>
-                            <li><span className="font-semibold">Email:</span> [your business email]</li>
-                            <li><span className="font-semibold">Website:</span> [your website URL]</li>
+                            <li><span className="font-semibold">Services:</span> Website &amp; graphic design, consultancy-led services, and non-regulated staffing and operational support</li>
+                            <li><span className="font-semibold">Email:</span> <a href="mailto:info@thinkedgeconsultancy.com" className="text-brand-primary hover:underline">info@thinkedgeconsultancy.com</a></li>
+                            <li><span className="font-semibold">Website:</span> <a href="https://thinkedgeconsultancy.com" className="text-brand-primary hover:underline">https://thinkedgeconsultancy.com</a></li>
                         </ul>
                     </section>
 

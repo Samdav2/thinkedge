@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, Mail, Linkedin, Instagram } from "lucide-react";
+import { Phone, Mail, Linkedin, Instagram, MapPin } from "lucide-react";
 import Image from "next/image";
 
 export default function Footer() {
@@ -74,6 +74,14 @@ export default function Footer() {
                         </h3>
                         <div className="space-y-8">
                             <div className="space-y-4">
+                                <div className="flex items-start">
+                                    <MapPin className="h-5 w-5 mr-3 text-blue-200 mt-0.5 flex-shrink-0" />
+                                    <span className="text-blue-100 text-sm leading-relaxed">
+                                        82A James Carter Road,<br />
+                                        Mildenhall, Suffolk,<br />
+                                        IP28 7DE, United Kingdom
+                                    </span>
+                                </div>
                                 <div className="flex items-center">
                                     <Phone className="h-5 w-5 mr-3 text-blue-200" />
                                     <span className="text-blue-100 text-sm">+44 7342957065</span>
@@ -90,13 +98,13 @@ export default function Footer() {
                             </div>
 
                             <div className="flex items-center justify-start">
-                                {/* Logo Placeholder */}
-                                <div className="flex items-center gap-2">
-                                    <div className="w-12 h-12 bg-yellow-400 flex items-center justify-center rounded-sm">
-                                        <span className="text-brand-dark font-bold text-xs">TE</span>
-                                    </div>
-                                    <span className="font-bold text-xl text-white tracking-wide">THINK EDGE</span>
-                                </div>
+                                <Image
+                                    src="/images/logo.png"
+                                    alt="Thinkedge Consultancy Ltd"
+                                    width={180}
+                                    height={62}
+                                    className="h-10 sm:h-12 w-auto object-contain"
+                                />
                             </div>
                         </div>
                     </div>

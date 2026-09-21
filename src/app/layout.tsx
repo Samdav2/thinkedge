@@ -15,8 +15,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Think Edge Consultancy | Business Strategy, EdgeBrand & EdgeCover",
+  title: {
+    default: "Thinkedge Consultancy",
+    template: "%s | Thinkedge Consultancy",
+  },
   description: "Helping individuals and organisations turn ideas into clear plans, make informed decisions through research, and deliver professional results.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Headphones, MessageSquare } from "lucide-react";
+import { Headphones, MessageSquare, MapPin } from "lucide-react";
 
 export default function ContactSection() {
     return (
@@ -63,13 +63,21 @@ export default function ContactSection() {
                                 </li>
                             </ul>
 
-                            <div className="flex flex-wrap gap-4 mb-10">
+                            <div className="flex flex-wrap gap-4 mb-8">
                                 <a href="#contact" className="bg-brand-primary text-white px-6 py-3 rounded-sm font-medium hover:bg-blue-700 transition-colors text-sm uppercase">
                                     Request a Consultation
                                 </a>
                                 <a href="https://wa.me/447448549211" className="border border-brand-primary text-brand-primary px-6 py-3 rounded-sm font-medium hover:bg-blue-50 transition-colors text-sm uppercase">
                                     Chat on WhatsApp
                                 </a>
+                            </div>
+
+                            <div className="flex items-start gap-3 p-4 bg-blue-50/70 rounded-md border border-blue-100 text-brand-dark mb-10">
+                                <MapPin className="h-5 w-5 text-brand-primary mt-0.5 flex-shrink-0" />
+                                <div className="text-sm">
+                                    <span className="font-bold block text-brand-dark">Registered Office:</span>
+                                    <span className="text-gray-700">82A James Carter Road, Mildenhall, Suffolk, IP28 7DE, United Kingdom</span>
+                                </div>
                             </div>
                         </div>
 

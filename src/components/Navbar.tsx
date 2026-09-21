@@ -20,12 +20,15 @@ export default function Navbar({ isTransparent = false }: NavbarProps) {
             <div className="w-full max-w-[1920px] mx-auto px-6 sm:px-12 lg:px-16">
                 <div className="flex justify-between h-20">
                     <div className="flex items-center">
-                        <Link href="/" className="flex-shrink-0 flex items-center gap-2">
-                            {/* Placeholder for Logo */}
-                            <div className="w-10 h-10 bg-yellow-400 flex items-center justify-center rounded-sm">
-                                <span className="text-brand-dark font-bold text-xs">TE</span>
-                            </div>
-                            <span className="font-bold text-xl text-white tracking-wide">THINK EDGE</span>
+                        <Link href="/" className="flex-shrink-0 flex items-center py-2">
+                            <Image
+                                src="/images/logo.png"
+                                alt="Thinkedge Consultancy Ltd"
+                                width={180}
+                                height={62}
+                                priority
+                                className="h-10 sm:h-12 w-auto object-contain"
+                            />
                         </Link>
                     </div>
 

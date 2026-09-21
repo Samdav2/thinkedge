@@ -29,8 +29,9 @@ export default function TermsOfService() {
                         <h3 className="text-xl font-bold text-brand-dark mb-3">1. About Us</h3>
                         <ul className="list-none space-y-2">
                             <li><span className="font-semibold">Company name:</span> Think Edge Consultancy Ltd</li>
+                            <li><span className="font-semibold">Registered address:</span> 82A James Carter Road, Mildenhall, Suffolk, IP28 7DE, United Kingdom</li>
                             <li><span className="font-semibold">Business type:</span> UK business consultancy</li>
-                            <li><span className="font-semibold">Services:</span> Website & graphic design services, consultancy-led services, and non-regulated staffing and operational support</li>
+                            <li><span className="font-semibold">Services:</span> Website &amp; graphic design services, consultancy-led services, and non-regulated staffing and operational support</li>
                             <li><span className="font-semibold">Contact email:</span> <a href="mailto:info@thinkedgeconsultancy.com" className="text-brand-primary hover:underline">info@thinkedgeconsultancy.com</a></li>
                         </ul>
                     </section>

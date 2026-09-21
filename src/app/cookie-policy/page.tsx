@@ -96,6 +96,7 @@ export default function CookiePolicy() {
                     <section>
                         <h3 className="text-xl font-bold text-brand-dark mb-3">6. Contact Us</h3>
                         <p className="mb-2">If you have any questions about our use of cookies, please contact us at:</p>
+                        <p className="mb-1"><span className="font-semibold">Address:</span> 82A James Carter Road, Mildenhall, Suffolk, IP28 7DE, United Kingdom</p>
                         <p>Email: <a href="mailto:info@thinkedgeconsultancy.com" className="text-brand-primary hover:underline">info@thinkedgeconsultancy.com</a></p>
                     </section>
                 </div>
